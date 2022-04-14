@@ -8,8 +8,11 @@
           </div>
           <span class="app-title" color=" red">您是管理员：{{ admin.nickname }}</span>
           <div class=" app-logOut">
+            <el-button type="primary" style="" icon="el-icon-full-screen" @click='clickFullscreen'>全屏</el-button>
             <el-button style="margin-right: 100px" type="primary" @click="logout">退出登录</el-button>
+
           </div>
+
         </div>
       </el-header>
       <el-container>
@@ -58,11 +61,11 @@
 </template>
 
 <script>
-
 import IdleGoods from '../common/IdleGoods.vue'
 import orderList from '../common/orderList.vue'
 import userList from '../common/userList.vue'
 import ecahtesaa from '../common/ecahtesaa.vue'
+import screenfull from 'screenfull'
 
 export default {
   name: "platform-admin",
@@ -74,16 +77,28 @@ export default {
   },
   data() {
     return {
+
       mode: 4,
       admin: {
         nickname: '管理员',
       },
+      isFullscreen: false
     }
   },
   created() {
     this.admin.nickname = this.$sta.adminName;
   },
   methods: {
+    clickFullscreen() {
+      if (!screenfull.isEnabled) {
+        this.$message({
+          message: 'you browser can not work',
+          type: 'warning'
+        })
+        return false
+      }
+      screenfull.toggle()
+    },
     logout() {
       this.$api.loginOut({}).then(res => {
         if (res.status_code === 1) {
@@ -100,11 +115,13 @@ export default {
         this.mode = val
       }
     },
-  },
+  }
 }
 </script>
 
 <style scoped>
+
+
 .header {
   position: fixed;
   top: 0;
