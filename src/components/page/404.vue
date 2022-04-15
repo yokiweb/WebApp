@@ -8,7 +8,7 @@
         <img class="pic-404__child right" src="../../stice/404_images/404_cloud.png" alt="404">
       </div>
       <div class="bullshit">
-        <div class="bullshit__oops">OOPS!</div>
+        <div class="bullshit__oops">OOPS!!</div>
         <div class="bullshit__info">YAOYAO二手商城
           <a style="color:#20a0ff" href="" target="_blank">YAOYAO二手商城</a>
         </div>
