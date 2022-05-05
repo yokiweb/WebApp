@@ -190,7 +190,8 @@ export default {
 <style scoped>
 .release-idle-container {
   min-height: 85vh;
-  background: #e9bba9;
+  background: #efefea;
+  border: 1px solid #EBEEF5 !important;
 }
 
 .release-idle-container-title {

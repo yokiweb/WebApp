@@ -76,7 +76,7 @@ export default {
 .message-container {
   min-height: 85vh;
   padding: 0 20px;
-  background: #e9bba9;
+  background: #FFFFFF;
 }
 
 .message-container-title {

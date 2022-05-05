@@ -1,5 +1,5 @@
 <template>
-  <div style="background: darksalmon">
+  <div style="background: #efefea">
     <app-head></app-head>
     <div style="height: 10px"></div>
     <app-body>
@@ -19,24 +19,36 @@
 
             mode="horizontal"
             @select="handleSelect"
-            background-color="#a64942"
-            text-color="#fff"
+            style="border-style:none; "
+            text-color="#000000"
             active-text-color="#ffd04b"
             v-model="labelName">
-          <el-menu-item index="0" label="猜你喜欢" v-model="labelName" labelName="0"><i class="el-icon-edit"></i>猜你喜欢
+          <el-menu-item index="0" label="猜你喜欢" v-model="labelName" labelName="0"
+                        style="border-style:none; font-weight: bold;letter-spacing:2px;"><i
+              class="el-icon-edit"></i>猜你喜欢
           </el-menu-item>
 
-          <el-menu-item index="1" label="今日数码" v-model="labelName" labelName="1"><i class="el-icon-mobile-phone"></i>今日数码
+          <el-menu-item index="1" label="今日数码" v-model="labelName" labelName="1"
+                        style="border-style:none; font-weight: bold;letter-spacing:2px;"><i
+              class="el-icon-mobile-phone"></i>今日数码
           </el-menu-item>
-          <el-menu-item index="2" label="户外用品" v-model="labelName" labelName="2"><i class="el-icon-delete-location"></i>户外用品
+          <el-menu-item index="2" label="户外用品" v-model="labelName" labelName="2"
+                        style="border-style:none; font-weight: bold;letter-spacing:2px;"><i
+              class="el-icon-delete-location"></i>户外用品
           </el-menu-item>
-          <el-menu-item index="3" label="我爱读书" v-model="labelName" labelName="3"><i class="el-icon-notebook-1"></i>我爱读书
+          <el-menu-item index="3" label="我爱读书" v-model="labelName" labelName="3"
+                        style="border-style:none; font-weight: bold;letter-spacing:2px;"><i
+              class="el-icon-notebook-1"></i>我爱读书
           </el-menu-item>
-          <el-menu-item index="4" label="家电生活馆" v-model="labelName" labelName="4"><i class="el-icon-service"></i>家电生活馆
+          <el-menu-item index="4" label="家电生活馆" v-model="labelName" labelName="4"
+                        style="border-style:none; font-weight: bold;letter-spacing:2px;"><i
+              class="el-icon-service"></i>家电生活馆
           </el-menu-item>
-          <el-menu-item index="5" label="其他好物" v-model="labelName" labelName="5"><i class="el-icon-apple"></i>其他好物
+          <el-menu-item index="5" label="其他好物" v-model="labelName" labelName="5"
+                        style="border-style:none; font-weight: bold;letter-spacing:2px;"><i
+              class="el-icon-apple"></i>其他好物
           </el-menu-item>
-          <el-submenu index="6">
+          <el-submenu index="6" style="border-style:none; font-weight: bold;">
             <template slot="title" label="非卖品">非卖品</template>
             <el-menu-item index="6-1">惊喜</el-menu-item>
             <el-menu-item index="6-2">游戏</el-menu-item>
@@ -50,14 +62,19 @@
             <!--            </el-submenu>-->
           </el-submenu>
         </el-menu>
+        <div style="height:10px;background: #efefea;margin-bottom: 25px"></div>
 
-
-        <div style="margin: 0 20px;">
+        <div style="background: "></div>
+        <div style="margin: 0 20px; border-style: none;background: #efefea">
           <el-row :gutter="30">
             <el-col :span="6" v-for="(idle,index) in idleList">
-              <div class="idle-card" @click="toDetails(idle)">
+              <div class="idle-card" @click="toDetails(idle)"
+                   style="border: none;
+box-shadow: 0 12px 5px -10px rgba(0,0,0,0.1), 0 0 4px 0 rgba(0,0,0,0.2);
+-webkit-box-shadow: 0 12px 5px -10px rgba(0,0,0,0.1), 0 0 4px 0 rgba(0,0,0,0.1);
+border-radius: 5px;background: #FFFFFF;margin: 5px">
                 <el-image
-                    style="width: 100%; height: 160px"
+                    style="width: 100%; height: 160px;top: 5px"
                     :src="idle.imgUrl"
                     fit="contain">
                   <div slot="error" class="image-slot">
@@ -91,7 +108,8 @@
             </el-col>
           </el-row>
         </div>
-        <div class="fenye">
+        <div style="height:10px;background: #efefea;margin-bottom: 25px"></div>
+        <div class="fenye" style="background: #efefea">
           <el-pagination
               background
               @current-change="handleCurrentChange"

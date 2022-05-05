@@ -4,16 +4,23 @@
     <app-body>
       <div style="min-height: 85vh;">
         <div style="margin: 0 20px;padding-top: 20px;">
-          <div style="text-align: center;color: #555555;padding: 20px;" v-if="idleList.length===0">暂无匹配的闲置物品</div>
+          <div
+              style="margin: 0 20px;text-align: center;color: #555555;padding: 20px;border-style: none;background: #efefea"
+              v-if="idleList.length===0">暂无匹配的闲置物品
+          </div>
           <el-row :gutter="30">
             <el-col :span="6" v-for="(idle,index) in idleList">
-              <div class="idle-card" @click="toDetails(idle)">
+              <div class="idle-card" @click="toDetails(idle)"
+                   style="border: none;
+box-shadow: 0 12px 5px -10px rgba(0,0,0,0.1), 0 0 4px 0 rgba(0,0,0,0.1);
+-webkit-box-shadow: 0 12px 5px -10px rgba(0,0,0,0.1), 0 0 4px 0 rgba(0,0,0,0.1);
+border-radius: 5px;background: #FFFFFF;margin: 5px">
                 <el-image
-                    style="width: 100%; height: 160px"
+                    style="width: 100%; height: 160px;top: 5px"
                     :src="idle.imgUrl"
                     fit="contain">
                   <div slot="error" class="image-slot">
-                    <i class="el-icon-picture-outline">无图</i>
+                    <i class="el-icon-picture-outline">Nothing....-_-</i>
                   </div>
                 </el-image>
                 <div class="idle-title">
@@ -43,7 +50,8 @@
             </el-col>
           </el-row>
         </div>
-        <div class="fenye">
+        <div style="height:10px;background: #efefea;margin-bottom: 25px"></div>
+        <div class="fenye" style="background: #efefea">
           <el-pagination
               background
               @current-change="handleCurrentChange"
@@ -130,7 +138,7 @@ export default {
   border: #eeeeee solid 1px;
   margin-bottom: 15px;
   cursor: pointer;
-  background: #e9bba9;
+  background: #FFFFFF;
 }
 
 .fenye {

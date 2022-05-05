@@ -3,18 +3,21 @@
     <div class="header-container">
       <Row class="header-img">
         <img class="logo" src="../../stice/YAOYAO1.png" style="width: 60px" height="60px">
+        <div class="app-name">
+          <router-link to="/">YAOYAO二手商城</router-link>
+        </div>
       </Row>
-      <div class="app-name">
-        <router-link to="/">YAOYAO二手商城</router-link>
-      </div>
       <div class="search-container">
         <el-input placeholder="搜闲置..." v-model="searchValue" @keyup.enter.native="searchIdle"
-                  style="border: red 2px solid; ">
+                  style="border-style: none">
           <el-button slot="append" icon="el-icon-search" type="primary" @click="searchIdle"></el-button>
         </el-input>
       </div>
-      <el-button type="primary" icon="el-icon-circle-plus-outline" @click="toRelease">发布闲置</el-button>
-      <el-button type="info" icon="el-icon-chat-dot-round" @click="toMessage">我的消息</el-button>
+      <div>
+        <el-button type="primary" icon="el-icon-circle-plus-outline" @click="toRelease">发布闲置
+        </el-button>
+        <el-button type="info" icon="el-icon-chat-dot-round" @click="toMessage">我的消息</el-button>
+      </div>
       <router-link v-if="!isLogin" class="user-name-text" to="/login">登录</router-link>
       <el-dropdown trigger="click" v-else>
         <div style="cursor:pointer;display: flex;align-items: center;">
@@ -119,7 +122,7 @@ export default {
   right: 0;
   width: 100%;
   height: 70px;
-  background: #EAFFD0;
+  background: #FFFFFF;
   display: flex;
   justify-content: center;
   border-bottom: #eeeeee solid 2px;
@@ -128,21 +131,28 @@ export default {
 
 .header-img {
   align-items: center;
+
 //width: 60px; //height: 60px; display: flex; justify-content: center !important;
 }
 
 .header-container {
-  width: 1000px;
+  width: 1100px;
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
+.app-name {
+  z-index: ;
+}
+
 .app-name a {
-  color: #409EFF;
+  color: #000000;
   font-size: 24px;
   text-decoration: none;
+  font-weight: bold;
+
 }
 
 .search-container {

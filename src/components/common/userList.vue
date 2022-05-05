@@ -299,7 +299,7 @@ export default {
 
 <style scoped>
 .main-border {
-  background-color: #e9bba9;
+  background-color: #FFFFFF;
   padding: 10px 30px;
   box-shadow: 0 1px 15px -6px rgba(0, 0, 0, .5);
   border-radius: 5px;

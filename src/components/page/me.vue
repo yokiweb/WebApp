@@ -3,7 +3,7 @@
     <app-head :nickname-value="userInfo.nickname"
               :avatarValue="userInfo.avatar"></app-head>
     <app-body>
-      <div v-show="!eidtAddress" style="background: #e9bba9">
+      <div v-show="!eidtAddress">
         <div class="user-info-container">
           <div class="user-info-details">
 
@@ -115,7 +115,8 @@
       <div v-show="eidtAddress" class="address-container">
         <el-page-header class="address-container-back" @back="eidtAddress=false"
                         content="收货地址"></el-page-header>
-        <div class="address-container-add">
+        <div class="address-container-add" style="border: 1px solid #EBEEF5 !important;
+            ">
           <div class="address-container-add-title">新增收货地址</div>
           <div class="address-container-add-item">
             <el-input placeholder="请输入收货人姓名" v-model="addressInfo.consigneeName" maxlength="10"
@@ -150,12 +151,14 @@
           <el-button style="margin-left: 20px;" @click="saveAddress">保存</el-button>
         </div>
         <div class="address-container-list">
-          <div style="color: #409EFF;font-size: 15px;padding-left: 10px;">已有收货地址</div>
+          <div style="color: #000000;  font-weight: bolder;
+  text-align: center;font-size: 15px;padding-left: 10px;margin-bottom: 10px">已有收货地址
+          </div>
           <el-table
               stripe
               :data="addressData"
               background-color="#e9bba9"
-              style="width: 100%">
+              style="width: 100%;border: 1px solid #EBEEF5 !important;">
             <el-table-column
                 prop="consigneeName"
                 label="收货人姓名"
@@ -607,7 +610,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #e9bba9;
+  background: #FFFFFF;
 }
 
 .user-info-details {
@@ -700,7 +703,7 @@ export default {
 
 .address-container {
   padding: 10px 20px;
-  background: #e9bba9;
+  background: #FFFFFF;
 }
 
 .address-container-back {
@@ -709,8 +712,10 @@ export default {
 
 .address-container-add-title {
   font-size: 15px;
-  color: #409EFF;
+  color: #000000;
   padding: 10px;
+  font-weight: bolder;
+  text-align: center;
 }
 
 .address-container-add-item {
@@ -729,7 +734,8 @@ export default {
 
 .address-container-list {
   padding: 30px 100px;
-  background: #e9bba9;
+  background: #FFFFFF;
+//border: 1px #000000 solid;
 }
 
 .idle-item-foot {

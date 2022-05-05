@@ -10,7 +10,6 @@
           <div class=" app-logOut">
             <el-button type="primary" style="" icon="el-icon-full-screen" @click='clickFullscreen'>全屏</el-button>
             <el-button style="margin-right: 100px" type="primary" @click="logout">退出登录</el-button>
-
           </div>
 
         </div>

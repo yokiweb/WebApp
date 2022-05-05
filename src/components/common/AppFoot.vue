@@ -1,16 +1,10 @@
 <template>
 
   <div class="foot-container">
+    <div style="height:10px;margin-bottom: 25px"></div>
     <div class="author"><span class="">@YAOYAO二手商城</span>
-      <el-divider></el-divider>
-      <el-link href="https://www.tsu.edu.cn/" target="_blank">让你发现生活中的乐趣~</el-link>
-      <<!--div style="height: 50px">
-        <el-progress type="circle" :percentage="0"></el-progress>
-        <el-progress type="circle" :percentage="25"></el-progress>
-        <el-progress type="circle" :percentage="100" status="success"></el-progress>
-        <el-progress type="circle" :percentage="70" status="warning"></el-progress>
-        <el-progress type="circle" :percentage="50" status="exception"></el-progress>
-      </div>-->
+      <br><br><br>
+      <el-link href="https://www.tsu.edu.cn/" target="_blank">YAOYAO，让你的闲置动起来~</el-link>
     </div>
   </div>
 </template>
@@ -26,8 +20,9 @@ export default {
   width: 100%;
   display: flex;
   justify-content: center;
-  height: 40px;
+  height: 80px;
   padding-top: 10px;
+  background: #FFFFFF;
 }
 
 .author {
